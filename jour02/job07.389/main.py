@@ -21,12 +21,10 @@ class Bibliotheque:
             self.catalogue[nomLivre].update(quantiteActuelle)
 
     def rendreLivres(self, client):
-        nombreLivre = len(client.catalogue)
-        i = 0
-        while i < nombreLivre:
-            #actualiser ou ajouter ?
-            print(client.catalogue[i])
-            i += 1
+        livres = client.getCollection()
+        for livres in livres:
+            self.catalogue[livre] = self.catalogue[livre] +1
+            client.emptycollection()
 
 
 biblio = Bibliotheque("BiblioTek", {"Batman vs Joker":2, "Romeo et Juliette":15})

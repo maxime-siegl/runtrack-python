@@ -10,3 +10,6 @@ class Client(Personne):
 
     def inventaire(self):
         print(self.collection)
+
+    def emptyCollection(self):
+        self.collection = {}
